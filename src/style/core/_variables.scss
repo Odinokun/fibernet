@@ -1,0 +1,14 @@
+// ===== main colors =====
+$brand: #00a7e3;
+$highlight: #00a7e3;
+$highlight-hov: darken($highlight, 5%);
+
+// ===== text colors =====
+$text: #fff;
+
+// ===== link colors =====
+$link: lighten($brand, 10%);
+$link-hov: lighten($link, 25%);
+
+// ===== transition =====
+$transition-hover: .3s ease-in-out;

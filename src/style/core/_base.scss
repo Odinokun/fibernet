@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.38;
+  color: $text;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+p {
+  margin: 0 0 10px 0;
+  strong {
+    font-weight: 700;
+  }
+}
+
+a {
+  transition: color $transition-hover;
+  text-decoration: none;
+  color: $link;
+  &:hover {
+    color: $link-hov;
+  }
+}
+
+ol,
+ul {
+  li {
+    padding: 0;
+  }
+}
+
+input,
+textarea,
+select,
+button {
+  border-radius: 0 !important;
+  outline: none;
+}
+
+input {
+  padding: 3px 10px 5px 10px;
+  color: $text;
+  border: 1px solid $text;
+
+  @include placeholder-color($text);
+}
+
+textarea {
+  resize: none;
+}
+
+input.error,
+textarea.error {
+  border-color: #ed1b24 !important;
+  background: #fbd1d3 !important;
+}
+
+svg {
+  display: block;
+  overflow: visible;
+}
+
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  //свойство для исправления бага 100vh для мобильных
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
+  //свойство для плавной прокрутки на яблоках
+
+  -webkit-overflow-scrolling: touch;
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.main {
+  position: relative;
+
+  flex-grow: 1;
+  &::before {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 33%;
+    height: 100vh;
+    content: '';
+    pointer-events: none;
+    opacity: .2;
+    background-image: linear-gradient(90deg, #0066c4 0%, rgba(0, 102, 196, 0) 100%);
+  }
+  &::after {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 33%;
+    height: 100vh;
+    content: '';
+    transform: rotate(180deg);
+    pointer-events: none;
+    opacity: .2;
+    background-image: linear-gradient(90deg, #00cbd8 0%, rgba(0, 203, 216, 0) 100%);
+  }
+}
+
+.container-lg {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 40px;
+}

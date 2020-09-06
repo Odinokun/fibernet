@@ -1,0 +1,30 @@
+.btn--circle {
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  padding: 0px 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: $transition-hover;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 22px !important;
+  background-color: $highlight;
+  box-shadow: 0 5px 10px rgba(0, 167, 227, .3);
+  font-size: 12px;
+  font-weight: bold;
+  span {
+    display: block;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #00cbd8;
+    box-shadow: 0 5px 10px rgba(0, 167, 227, 0);
+  }
+}

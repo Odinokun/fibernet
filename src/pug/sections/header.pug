@@ -1,0 +1,29 @@
+//begin header
+header.header#header
+  .container-lg
+    //begin logo
+    a(href="/").header__logo.header-logo
+      +svg('logo')
+    //end logo
+
+    //begin phone
+    a(href="tel:+78126435050").header__phone.header-phone +7 (812) 643-50-50
+    //end phone
+
+    //begin header__mobile-menu-wrap
+    .header__mobile-menu-wrap
+      include ../elements/menu
+
+      //begin header__btns
+      .header__btns
+        a(href="#").btn.btn--circle.header__btn-pay
+          +svg('wallet')
+          span оплата
+        a(href="#").header__btn-person
+          +svg('person')
+      //end header__btns
+    //end header__mobile-menu-wrap
+
+    include ../elements/burger
+
+//end header

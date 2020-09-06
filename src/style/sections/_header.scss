@@ -1,0 +1,133 @@
+.header {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  padding-top: 20px;
+  background-image: linear-gradient(180deg, #141415 0%, rgba(20, 20, 21, 0) 100%);
+  .container-lg {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  margin-right: 32px;
+}
+
+.header-logo {
+  flex: none;
+  svg {
+    fill: $highlight;
+    width: 177px;
+    height: 22px;
+  }
+}
+
+.header__phone {
+  margin-right: auto;
+}
+
+.header-phone {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+
+  @include max(500) {
+    display: none;
+  }
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    margin: auto;
+    content: '';
+    transition: $transition-hover;
+    background-color: $highlight;
+  }
+  &:hover {
+    color: #fff;
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.header__mobile-menu-wrap {
+  display: flex;
+  align-items: center;
+  transition: $transition-hover;
+
+  @include max(1200) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    transform: translateX(110%);
+    background-color: #141415;
+  }
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+
+  @include max(1200) {
+    margin-top: auto;
+    padding-bottom: 40px;
+  }
+}
+
+.header__btn-pay {
+  flex: none;
+  margin-left: 23px;
+  padding: 8px 33px 5px 26px;
+  svg {
+    flex: none;
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+    margin-right: 7px;
+    transform: translateY(-1px);
+  }
+}
+
+.header__btn-person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  margin-left: 23px;
+  transition: $transition-hover;
+  border-radius: 50%;
+  background-color: rgba(0, 167, 227, .1);
+  &:hover {
+    background-color: rgba(0, 167, 227, .2);
+  }
+  svg {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+  }
+}
