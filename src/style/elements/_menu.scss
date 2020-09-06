@@ -19,9 +19,9 @@
 }
 
 .menu__item {
+  padding: 0 24px;
   list-style: none;
 
-    padding: 0 24px;
   @include max(1200) {
     width: 100%;
     padding: 0;
@@ -85,4 +85,3 @@
     color: #fff;
   }
 }
-
