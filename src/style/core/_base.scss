@@ -91,6 +91,7 @@ svg {
 .main-wrap {
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-height: 100vh;
   //свойство для исправления бага 100vh для мобильных
   min-height: -moz-available;
@@ -113,8 +114,9 @@ svg {
     position: fixed;
     z-index: 1;
     top: 0;
+    bottom: 0;
     width: 33%;
-    height: 100vh;
+    height: 100%;
     content: '';
     pointer-events: none;
     opacity: .2;
@@ -122,7 +124,7 @@ svg {
     @include max(840) {
       width: 40%;
     }
-    @include max(600) {
+    @include max(767) {
       width: 50%;
     }
   }
