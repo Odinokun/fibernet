@@ -10,7 +10,7 @@ module.exports = function() {
   // end popup open
 
   // begin popup close
-  $('#popup__layer, .popup__close').on('click', function() {
+  $('#popup__layer, .popup__close, .popup-success__btn').on('click', function() {
     $('.popup, #popup__layer').fadeOut();
   });
   // end popup close

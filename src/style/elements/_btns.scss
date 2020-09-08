@@ -84,7 +84,7 @@
   justify-content: center;
   align-items: center;
   height: 57px;
-  padding: 1px 15px 0 15px;
+  padding: 0 15px;
   cursor: pointer;
   user-select: none;
   transition: $transition-hover;
@@ -103,6 +103,36 @@
   span {
     display: block;
   }
+  &:hover {
+    color: #fff;
+    background-color: #00cbd8;
+    box-shadow: 0 5px 10px rgba(0, 167, 227, 0);
+  }
+}
+
+.popup-success__btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 160px;
+  height: 57px;
+  margin: 0 auto;
+  padding: 0 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: $transition-hover;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 30px !important;
+  background-color: $highlight;
+  box-shadow: 0 5px 10px rgba(0, 167, 227, .3);
   &:hover {
     color: #fff;
     background-color: #00cbd8;
