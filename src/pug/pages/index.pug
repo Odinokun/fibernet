@@ -30,9 +30,12 @@ block content
             input.index-search__form-submit(type='submit' value='Найти')
             .index-search__form-clear
         //end index__search
+      include ../elements/popup
       include ../sections/footer
     //end content
 
     include ../sections/scripts
     script.
       particlesJS.load('index-particles', 'assets/js/particlesjs-config-index.json', function() {});
+
+    script(src='https://www.google.com/recaptcha/api.js')

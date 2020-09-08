@@ -1,0 +1,12 @@
+//begin form-sm
+form.form.form-sm
+  input(type='text' placeholder='+7 (___) ___-__-__' required).form__input.form__input--phone.form-sm__input.phone-mask
+  input(type='text' placeholder='ФИО' required).form__input.form__input--name.form-sm__input
+  input(type='email' placeholder='Электронная почта').form__input.form-sm__input
+  //-site captcha
+  //-.g-recaptcha(data-sitekey="6LfqF8kZAAAAACRLR9vBV67aW6gZG7xOuRmvG9vD" data-theme="dark")
+  //-localhost captcha
+  .g-recaptcha(data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark")
+  .form__agree Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a>
+  input(type='submit' value='Подключиться').form__submit.disabled
+//end form-sm
