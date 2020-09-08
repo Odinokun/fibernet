@@ -6,6 +6,7 @@ $(document).ready(function ($) {
     'index',
     'index-result',
     'index-noresult',
+    'sales',
   ]);
 });
 

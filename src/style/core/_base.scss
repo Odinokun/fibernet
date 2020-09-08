@@ -107,8 +107,13 @@ svg {
 
 .main {
   position: relative;
+  padding-top: 143px;
+  padding-bottom: 140px;
 
   flex-grow: 1;
+  @include max(767) {
+    padding-top: 100px;
+  }
   &::before,
   &::after {
     position: fixed;
@@ -130,17 +135,20 @@ svg {
   }
   &::before {
     left: 0;
+    opacity: .2;
     background-image: linear-gradient(90deg, #0066c4 0%, rgba(0, 102, 196, 0) 100%);
   }
   &::after {
     right: 0;
     transform: rotate(180deg);
+    opacity: .2;
     background-image: linear-gradient(90deg, #00cbd8 0%, rgba(0, 203, 216, 0) 100%);
   }
 }
 
 .container-lg {
   position: relative;
+  z-index: 5;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -153,6 +161,7 @@ svg {
 
 .container {
   position: relative;
+  z-index: 5;
   width: 100%;
   max-width: 1190px;
   margin: 0 auto;
@@ -161,4 +170,12 @@ svg {
   @include max(500) {
     padding: 0 20px;
   }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+  margin-bottom: 28px;
+  color: #fff;
 }
