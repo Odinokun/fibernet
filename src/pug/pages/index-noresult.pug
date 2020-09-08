@@ -17,19 +17,16 @@ block content
         .index__hero
           h1.index__title Fibernet
           h2.index__subtitle Домашняя сеть
-          span.index__deskr Узнайте, есть ли наличие сети «FIBERNET» в вашем регионе
         //end index__hero
 
-        //begin index__search
-        .index__search.index-search
-          a(href="#").index-search__btn Проверить подключение
-          form.index-search__form
-            .ui-widget.index-search__ui-widget
-              label(for="search-adress")
-              input#search-adress(value='')
-            input.index-search__form-submit(type='submit' value='Найти')
-            .index-search__form-clear
-        //end index__search
+        //begin index__noresult
+        .index__noresult.index-noresult
+          +svg('flag')
+          .index-noresult__text
+            span Дом может быть подключен, но препятсвует ТСЖ.<br>Просьба связаться с нами для решения данного вопроса.
+          .index-noresult__btns
+            a(href="#").btn-transparent.index-noresult__btn Подключите мой дом
+        //end index__noresult
 
       include ../elements/popup
       include ../sections/footer

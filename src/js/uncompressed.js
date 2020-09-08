@@ -4,7 +4,8 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'index-result'
+    'index-result',
+    'index-noresult',
   ]);
 });
 
