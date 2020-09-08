@@ -1,0 +1,57 @@
+extends ../_template
+
+block variables
+  - var title       = 'Sales | Fibernet'
+  - var description = ''
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.sales
+      .index-particles#index-particles
+
+      .container
+        h1.sales__title.title Акции
+        ul.sales__list
+          //begin sales__item.sales-item
+          li.sales__item.sales-item
+            a(href="#").sales-item__link
+              .sales-item__pic
+                img(src="assets/img/sales-01.jpg" alt="picture")
+              h3.sales-item__title Лето в подарок
+              span.sales-item__text Каждый новый абонент пользуется Интернетом до 1 октября абсолютно бесплатно.
+          //end sales__item.sales-item
+          //begin sales__item.sales-item
+          li.sales__item.sales-item
+            a(href="#").sales-item__link
+              .sales-item__pic
+                img(src="assets/img/sales-02.jpg" alt="picture")
+              h3.sales-item__title CASHBACK
+              span.sales-item__text Добавляем 5% на счёт при оплате банковской картой до списания.
+          //end sales__item.sales-item
+          //begin sales__item.sales-item
+          li.sales__item.sales-item
+            a(href="#").sales-item__link
+              .sales-item__pic
+                img(src="assets/img/sales-03.jpg" alt="picture")
+              h3.sales-item__title Trade-In
+              span.sales-item__text Выкупим средства от предыдущего оператора +20%.
+          //end sales__item.sales-item
+          //begin sales__item.sales-item
+          li.sales__item.sales-item
+            a(href="#").sales-item__link
+              .sales-item__pic
+                img(src="assets/img/sales-04.jpg" alt="picture")
+              h3.sales-item__title Три плюс один
+              span.sales-item__text При оплате трёх месяцев мы дарим Вам четвертый.
+          //end sales__item.sales-item
+
+      include ../sections/footer
+    //end content
+
+    include ../sections/scripts
+    script.
+      particlesJS.load('index-particles', 'assets/js/particlesjs-config-inn.json', function() {});
+
