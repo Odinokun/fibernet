@@ -139,3 +139,31 @@
     box-shadow: 0 5px 10px rgba(0, 167, 227, 0);
   }
 }
+
+.btn-transparent {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 57px;
+  padding: 0 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: $transition-hover;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #00a7e3;
+  border: 2px solid #00a7e3;
+  border-radius: 5px !important;
+  background-color: transparent;
+  box-shadow: none;
+  &:hover {
+    color: #00cbd8;
+    border: 2px solid #00cbd8;
+    background: rgba(0, 203, 216, .1);
+  }
+}

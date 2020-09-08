@@ -305,3 +305,83 @@
 }
 
 //end #SEARCH
+
+//begin #RESULT
+.index-result {
+  width: 100%;
+}
+
+.index-result__row {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  padding-top: 40px;
+
+  @include max(767) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding-top: 10px;
+  }
+}
+
+.index-result__adress {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 22px;
+  display: block;
+  max-width: 50%;
+  min-height: 23px;
+  padding-top: 2px;
+  padding-right: 12px;
+  padding-left: 33px;
+  color: #fff;
+  background-image: url('../img/circle-check.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 23px 23px;
+
+  @include max(767) {
+    max-width: 100%;
+  }
+}
+
+.index-result__another-adress {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 17px;
+  width: 50%;
+  padding-top: 5px;
+  padding-left: 12px;
+  text-decoration: none;
+  color: #00a7e3;
+
+  @include max(767) {
+    width: auto;
+  }
+  &:hover {
+    text-decoration: underline;
+    color: #00a7e3;
+  }
+}
+
+.index-result__btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include max(767) {
+    flex-direction: column;
+  }
+}
+
+.index-result__btn {
+  width: 100%;
+  max-width: 194px;
+  margin: 0 10px 10px 10px;
+}
+
+//end #RESULT

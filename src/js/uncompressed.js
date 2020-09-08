@@ -3,7 +3,8 @@
 
 $(document).ready(function ($) {
   pageWidget([
-    'index'
+    'index',
+    'index-result'
   ]);
 });
 
