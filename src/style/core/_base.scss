@@ -145,6 +145,10 @@ svg {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 40px;
+
+  @include max(500) {
+    padding: 0 20px;
+  }
 }
 
 .container {
@@ -153,4 +157,8 @@ svg {
   max-width: 1190px;
   margin: 0 auto;
   padding: 0 40px;
+
+  @include max(500) {
+    padding: 0 20px;
+  }
 }

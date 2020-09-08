@@ -16,12 +16,18 @@ $(function() {
   require('./modules/UI')();
 
   // begin phone mask
-  // require('./modules/maskedinput')();
+  require('./modules/maskedinput')();
+
+  // begin Popup
+  require('./modules/popup')();
+
+  // begin btn form active
+  require('./modules/btnActive')();
+
+  // begin input full
+  require('./modules/inputFull')();
 
   // begin Slick slider
   // require('./modules/slick')();
-
-  // begin Popup
-  // require('./modules/popup')();
 
 });
