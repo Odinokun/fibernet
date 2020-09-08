@@ -1,6 +1,7 @@
 //begin popup
 .popup__layer#popup__layer
 
+//begin popup-include
 .popup.popup-include#popup-include
   .popup__close
     +svg('close')
@@ -8,4 +9,18 @@
     .popup-include__text
       span Данный адрес пока не подключен к FIBERNET, но вы можете оставить заявку на подключение
     include ../elements/form-sm
+//end popup-include
+
+//begin popup-success
+.popup.popup-success#popup-success
+  .popup__inn
+    .popup-success__header
+      +svg('check')
+      span Заявка удачно отправлена
+    .popup-success__text
+      span Наш сотрудник свяжется с вами в течение 24 часов для уточнения деталей подключения.
+    button.popup-success__btn Ок
+//end popup-success
+
+
 //end popup
