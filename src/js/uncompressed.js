@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'index-result',
     'index-noresult',
     'sales',
+    'sale',
   ]);
 });
 
@@ -30,4 +31,3 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
-

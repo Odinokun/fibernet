@@ -30,6 +30,7 @@
 }
 
 .menu__link {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,6 +83,44 @@
   @include max(1200) {
     font-size: 14px;
     font-weight: 500;
+    color: #fff;
+  }
+}
+
+.menu-tooltip {
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 10px);
+  left: 50%;
+  width: 210px;
+  padding: 15px;
+  transition: $transition-hover;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 3px;
+  background: #979d9d;
+
+  @include max(1200) {
+    top: 80%;
+  }
+  &::before {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    left: 0;
+    width: 0;
+    margin: auto;
+    content: '';
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #979d9d;
+    border-left: 8px solid transparent;
+  }
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
     color: #fff;
   }
 }

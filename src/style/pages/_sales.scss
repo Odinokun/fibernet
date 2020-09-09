@@ -1,3 +1,9 @@
+.sales {
+  .container {
+    pointer-events: none;
+  }
+}
+
 .sales__list {
   display: flex;
   flex-wrap: wrap;
@@ -13,11 +19,12 @@
 }
 
 .sales-item {
+  display: flex;
   overflow: hidden;
   width: calc(33.33% - 30px);
   margin: 0 15px 30px 15px;
-  padding-bottom: 30px;
   list-style: none;
+  pointer-events: auto;
   border-radius: 5px;
   background: #141415;
 
@@ -32,6 +39,7 @@
 
 .sales-item__link {
   display: block;
+  padding-bottom: 30px;
 }
 
 .sales-item__pic {

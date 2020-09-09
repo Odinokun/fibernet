@@ -27,6 +27,9 @@ $(function() {
   // begin input full
   require('./modules/inputFull')();
 
+  // begin search field shake
+  require('./modules/searchShake')();
+
   // begin Slick slider
   // require('./modules/slick')();
 

@@ -1,0 +1,35 @@
+extends ../_template
+
+block variables
+  - var title       = 'Sales | Fibernet'
+  - var description = ''
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.sale
+      .index-particles#index-particles
+
+      .container
+        h1.sales__title.title Лето в подарок
+        //begin sale__article
+        .sale__article.sale-article
+          .sale-article__img
+              img(src="assets/img/sale-01.jpg" alt="picture")
+          .sale-article__info
+            h2.sale-article__title Каждый новый абонент пользуется Интернетом всё лето абсолютно БЕСПЛАТНО!
+            .sale-article__text
+              p Абонент считается новым только при отсутствии подключения Untolovo.NET по данному адресу;<br>Предоставляется бесплатный доступ в Интернет по выбранному тарифному плану до 01 октября 2020 года. Первое списание абонентской платы будет произведено в 10:00 01.10.2020 года;
+              p В случае досрочного расторжения договора сумма внесенного авансового платежа идёт в счёт абонентской платы за использованные расчётные периоды по действующему тарифному плану;
+              p До 01 ноября 2020 года включительно действует мораторий на смену тарифного плана на меньший.
+        //end sale__article
+
+      include ../sections/footer
+    //end content
+
+    include ../sections/scripts
+    script.
+      particlesJS.load('index-particles', 'assets/js/particlesjs-config-inn.json', function() {});
+
