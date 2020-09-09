@@ -8,6 +8,7 @@ $(document).ready(function ($) {
     'index-noresult',
     'sales',
     'sale',
+    'video',
   ]);
 });
 

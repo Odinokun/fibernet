@@ -1,0 +1,18 @@
+extends ../_template
+
+block variables
+  - var title       = 'Sales | Fibernet'
+  - var description = ''
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.video(style='background-image:url("assets/img/video.jpg");background-repeat:no-repeat;background-position:center 100%;background-size:cover;')
+
+      include ../sections/footer
+    //end content
+
+    include ../sections/scripts
+
