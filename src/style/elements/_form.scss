@@ -5,7 +5,8 @@
   margin: 0 auto;
 }
 
-.form__input {
+.form__input,
+.form__textarea {
   font-size: 14px;
   line-height: 17px;
   margin-bottom: 10px;
@@ -13,7 +14,7 @@
   transition: $transition-hover;
   border: 1px solid #434344;
   border-radius: 3px !important;
-  background: transparent;
+  background-color: #141415;
 
   @include placeholder-color(#89898a);
   &:hover {

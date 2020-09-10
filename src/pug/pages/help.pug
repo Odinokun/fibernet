@@ -1,0 +1,60 @@
+extends ../_template
+
+block variables
+  - var title       = 'Sales | Fibernet'
+  - var description = ''
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.help
+      .index-particles#index-particles
+
+      .container
+        h1.sales__title.title Помощь
+        //begin help-form
+        form.help-form
+          //begin help-form__left
+          .help-form__left
+            h2.help-form__title Категория проблемы
+            .help-form__left-inn
+              select.help-form__select#help-form__select
+                option Нет подключения к интернету
+                option Низкая скорость соединения
+                option Вопросы оплаты и списания абонентской платы
+                option Другое
+              textarea(placeholder='Опишите проблему').form__textarea.help-form__textarea
+              .help-form__file-input
+                input(type='file')
+                +svg('clip')
+                span Приложить файл (JPEG, PNG).<br>Не более 5 Мб.
+          //end help-form__left
+
+          //begin help-form__right
+          .help-form__right
+            h2.help-form__title Персональные данные
+            .help-form__right-inn
+              input(type='text' placeholder='+7 (___) ___-__-__' required).form__input.form__input--phone.form-sm__input.phone-mask
+              input(type='text' placeholder='ФИО' required).form__input.form__input--name.form-sm__input
+              input(type='text' placeholder='Адрес подключения').form__input.form__input--name.form-sm__input
+              input(type='text' placeholder='Лицевой счет').form__input.form__input--name.form-sm__input
+              input(type='email' placeholder='Электронная почта').form__input.form-sm__input
+              //-site captcha
+              //-.g-recaptcha(data-sitekey="6LfqF8kZAAAAACRLR9vBV67aW6gZG7xOuRmvG9vD" data-theme="dark")
+              //-localhost captcha
+              .g-recaptcha(data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark")
+              .form__agree Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a>
+              input(type='submit' value='Отправить').form__submit.disabled
+          //end help-form__right
+        //end help-form
+
+      include ../sections/footer
+    //end content
+
+    include ../sections/scripts
+    script.
+      particlesJS.load('index-particles', 'assets/js/particlesjs-config-inn.json', function() {});
+
+    script(src='https://www.google.com/recaptcha/api.js')
