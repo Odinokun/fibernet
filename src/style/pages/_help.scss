@@ -1,9 +1,11 @@
 .help-form {
   display: flex;
+
   @include max(767) {
     flex-direction: column;
   }
 }
+
 .help-form__title {
   font-size: 16px;
   font-weight: 500;
@@ -18,17 +20,20 @@
   flex-direction: column;
   width: 100%;
   max-width: 455px;
+
   @include max(767) {
     max-width: 302px;
     margin: 0 auto 40px;
   }
 }
+
 .help-form__left-inn {
   display: flex;
   flex-direction: column;
 
   flex-grow: 1;
 }
+
 .help-form__left-inn {
   .help-form__select + span {
     font-family: 'Inter', sans-serif;
@@ -65,7 +70,6 @@
       border-left: 4px solid transparent;
     }
 
-
     &:hover {
       color: #00cbd8;
       border: 2px solid #00cbd8;
@@ -75,6 +79,10 @@
   .ui-selectmenu-icon {
     display: none !important;
   }
+}
+
+.ui-selectmenu-menu {
+  max-width: 302px;
 }
 
 .help-form__option {
@@ -108,18 +116,24 @@
     }
   }
 }
+
 .help-form__textarea {
+  min-height: 140px;
+
   flex-grow: 1;
-  min-height: 160px;
+  @include max(767) {
+    min-height: 160px;
+  }
 }
+
 .help-form__file-input {
   position: relative;
-  margin-bottom: 10px;
   display: flex;
   overflow: hidden;
   align-items: center;
-  height: 28px;
   width: 100%;
+  height: 28px;
+  margin-bottom: 10px;
   input {
     position: absolute;
     top: 0;
@@ -155,25 +169,28 @@
     color: #898c90;
   }
 }
-//end #LEFT
 
+//end #LEFT
 
 //begin #RIGHT
 .help-form__right {
   flex: none;
   width: 418px;
   padding-left: 116px;
+
   @include max(1023) {
     width: 342px;
     padding-left: 40px;
+
     @include max(767) {
       width: 100%;
       max-width: 302px;
-      padding-left: 0;
       margin: 0 auto;
+      padding-left: 0;
     }
   }
 }
+
 .help-form__right-inn {
   display: flex;
   flex-direction: column;

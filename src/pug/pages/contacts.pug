@@ -1,0 +1,74 @@
+extends ../_template
+
+block variables
+  - var title       = 'Contacts | Fibernet'
+  - var description = ''
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main
+      .index-particles#index-particles
+
+      .container
+        h1.sales__title.title Контакты
+        //begin contacts
+        .contacts
+          //begin contacts__left
+          .contacts__left
+            //begin contacts-item
+            .contacts__item.contacts-item
+              span.contacts-item__title Телефоны:
+              a(href="tel:+78126435050").contacts-item__link.contacts-item__link--phone +7 (812) 643-50-50
+              a(href="tel:+78129273220").contacts-item__link.contacts-item__link--phone +7 (812) 927-32-20
+            //end contacts-item
+
+            //begin contacts-item
+            .contacts__item.contacts-item
+              span.contacts-item__title Электронная почта:
+              a(href="mailto:info@fiber-net.ru").contacts-item__link.contacts-item__link--mail info@fiber-net.ru
+            //end contacts-item
+
+            //begin contacts-item
+            .contacts__item.contacts-item
+              span.contacts-item__title Адрес:
+              a(href="https://goo.gl/maps/c6WhTDBG1rAXhJmx8" target="_blank" rel="nofollow noopener noreferrer").contacts-item__link.contacts-item__link--adress проспект Богатырский, дом 59, корпус 3, Санкт-Петербург, 197082
+            //end contacts-item
+
+            //begin contacts-item
+            .contacts__item.contacts-item
+              span.contacts-item__title Реквизиты компании:
+              span.contacts-item__text ООО «ЮНТА»<br>ИНН 7814328763, КПП 781401001
+              span.contacts-item__text Юридический адрес: 197082, Санкт-Петербург,<br>проспект Богатырский, дом 59, корпус 3, литер А, пом.8Н
+              span.contacts-item__text Почтовый адрес: 197082, Санкт-Петербург,<br>проспект Богатырский, дом 59, корпус 3
+              span.contacts-item__text Расчётный счёт: № 40702810222020000937<br>в Филиале ПАО «УралСиб» в Санкт-Петербурге,<br>БИК 044030706, корр.счёт 30101810800000000706
+            //end contacts-item
+          //end contacts__left
+
+          //begin help-form__right
+          .help-form__right
+            h2.help-form__title Есть вопросы? Напишите нам.
+            form.help-form__right-inn
+              input(type='text' placeholder='+7 (___) ___-__-__' required).form__input.form__input--phone.form-sm__input.phone-mask
+              input(type='text' placeholder='ФИО' required).form__input.form__input--name.form-sm__input
+              input(type='email' placeholder='Электронная почта').form__input.form-sm__input
+              textarea(placeholder='Текст сообщения').form__textarea.help-form__textarea
+              //-site captcha
+              //-.g-recaptcha(data-sitekey="6LfqF8kZAAAAACRLR9vBV67aW6gZG7xOuRmvG9vD" data-theme="dark")
+              //-localhost captcha
+              .g-recaptcha(data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark")
+              .form__agree Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a>
+              input(type='submit' value='Подключиться').form__submit.disabled
+          //end help-form__right
+        //end contacts
+
+      include ../sections/footer
+    //end content
+
+    include ../sections/scripts
+    script.
+      particlesJS.load('index-particles', 'assets/js/particlesjs-config-inn.json', function() {});
+
+    script(src='https://www.google.com/recaptcha/api.js')
