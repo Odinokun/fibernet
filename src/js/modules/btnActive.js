@@ -13,7 +13,7 @@ module.exports = function() {
     }
   }
 
-  $('.form').on('change', function () {
+  $('.form, .help-form').on('change', function () {
     setInterval(btnActivate, 1000);
   });
   // end btn form active

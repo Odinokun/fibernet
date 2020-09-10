@@ -94,9 +94,9 @@ svg {
   height: 100%;
   min-height: 100vh;
   //свойство для исправления бага 100vh для мобильных
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
+  //min-height: -moz-available;
+  //min-height: -webkit-fill-available;
+  //min-height: fill-available;
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;

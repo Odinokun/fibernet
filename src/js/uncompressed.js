@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'sales',
     'sale',
     'video',
+    'help',
   ]);
 });
 

@@ -1,6 +1,7 @@
 module.exports = function () {
 
   // begin jqueryUI elements
+  // begin AUTOCOMPLETE
   $(function () {
     let searchInput = $('#search-adress');
     let clearInput = $('.index-search__form-clear');
@@ -68,6 +69,14 @@ module.exports = function () {
     $('#search-adress').focus();
     $('.index-search__form-clear').removeClass('active');
   })
+  // end AUTOCOMPLETE
+
+  // begin SELECT
+  $( "#help-form__select" ).selectmenu()
+    .selectmenu( "menuWidget" )
+    .addClass( "help-form__option" );
+  // end SELECT
+
   // end jqueryUI elements
 
 };
