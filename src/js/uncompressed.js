@@ -10,6 +10,7 @@ $(document).ready(function ($) {
     'sale',
     'video',
     'help',
+    'contacts',
   ]);
 });
 
