@@ -11,6 +11,9 @@ $(document).ready(function ($) {
     'video',
     'help',
     'contacts',
+    'pay',
+    'confidence',
+    'agree',
   ]);
 });
 

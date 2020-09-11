@@ -1,0 +1,25 @@
+extends ../_template
+
+block variables
+  - var title       = 'Оплата | Fibernet'
+  - var description = ''
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.pay
+      .index-particles#index-particles
+
+      .container
+        h1.title Оплата
+
+      include ../sections/footer
+    //end content
+
+    include ../sections/scripts
+    script.
+      particlesJS.load('index-particles', 'assets/js/particlesjs-config-inn.json', function() {});
+
+    script(src='https://www.google.com/recaptcha/api.js')
