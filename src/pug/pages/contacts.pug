@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - var title       = 'Contacts | Fibernet'
+  - var title       = 'Контакты | Fibernet'
   - var description = ''
 
 block content
@@ -13,7 +13,7 @@ block content
       .index-particles#index-particles
 
       .container
-        h1.sales__title.title Контакты
+        h1.title Контакты
         //begin contacts
         .contacts
           //begin contacts__left
@@ -64,6 +64,7 @@ block content
           //end help-form__right
         //end contacts
 
+      include ../elements/popup
       include ../sections/footer
     //end content
 

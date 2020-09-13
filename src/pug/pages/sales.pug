@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - var title       = 'Sales | Fibernet'
+  - var title       = 'Акции | Fibernet'
   - var description = ''
 
 block content
@@ -13,7 +13,7 @@ block content
       .index-particles#index-particles
 
       .container
-        h1.sales__title.title Акции
+        h1.title Акции
         ul.sales__list
           //begin sales__item.sales-item
           li.sales__item.sales-item
@@ -48,6 +48,7 @@ block content
               span.sales-item__text При оплате трёх месяцев мы дарим Вам четвертый.
           //end sales__item.sales-item
 
+      include ../elements/popup
       include ../sections/footer
     //end content
 
@@ -55,3 +56,4 @@ block content
     script.
       particlesJS.load('index-particles', 'assets/js/particlesjs-config-inn.json', function() {});
 
+    script(src='https://www.google.com/recaptcha/api.js')

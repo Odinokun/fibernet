@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - var title       = 'Sale | Fibernet'
+  - var title       = 'Акция | Fibernet'
   - var description = ''
 
 block content
@@ -13,7 +13,7 @@ block content
       .index-particles#index-particles
 
       .container
-        h1.sales__title.title Лето в подарок
+        h1.title Лето в подарок
         //begin sale__article
         .sale__article.sale-article
           .sale-article__img
@@ -26,6 +26,7 @@ block content
               p До 01 ноября 2020 года включительно действует мораторий на смену тарифного плана на меньший.
         //end sale__article
 
+      include ../elements/popup
       include ../sections/footer
     //end content
 
@@ -33,3 +34,4 @@ block content
     script.
       particlesJS.load('index-particles', 'assets/js/particlesjs-config-inn.json', function() {});
 
+    script(src='https://www.google.com/recaptcha/api.js')

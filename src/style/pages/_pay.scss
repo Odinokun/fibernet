@@ -1,0 +1,271 @@
+.pay__forms {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+  @include max(767) {
+    flex-direction: column;
+  }
+}
+
+.pay-form {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 40px 20px 50px 20px;
+
+  @include max(767) {
+    width: 100%;
+    padding: 30px 20px 30px 20px;
+  }
+}
+
+.pay-form--left {
+  background-color: #00a7e3;
+}
+
+.pay-form--right {
+  background-color: rgba(0, 203, 216, .2);
+}
+
+.pay-form__inn {
+  width: 100%;
+  max-width: 302px;
+}
+
+.pay-form__title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #fff;
+}
+
+.pay-form__text {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 15px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.pay-form__input {
+  font-size: 14px;
+  line-height: 17px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  transition: $transition-hover;
+  border: 1px solid #434344;
+  border-radius: 3px !important;
+  background-color: #141415;
+
+  @include placeholder-color(#89898a);
+  &:hover {
+    border: 1px solid #fff;
+  }
+  &.full,
+  &:focus {
+    color: #4a4d52;
+    background-color: #fff;
+
+    @include placeholder-color(#4a4d52);
+  }
+}
+
+.pay-form__submit {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 57px;
+  margin-top: 22px;
+  padding: 0 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: $transition-hover;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #00a7e3;
+  border: none;
+  border-radius: 5px !important;
+  background-color: #fff;
+  box-shadow: none;
+  &:hover {
+    color: #00a7e3;
+    background: rgba(255, 255, 255, .7);
+  }
+}
+
+.pay__text {
+  margin-bottom: 20px;
+  p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    margin-bottom: 0;
+    color: #fff;
+  }
+}
+
+.pay__text-sm {
+  margin-bottom: 62px;
+
+  @include max(767) {
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 15px;
+    margin-bottom: 15px;
+    opacity: .5;
+    color: #fff;
+  }
+}
+
+.pay-other__title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.pay-other__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 10px 0;
+  padding: 0;
+
+  @include max(1023) {
+    flex-wrap: wrap;
+  }
+}
+
+.pay-other__item {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  width: calc(14% - 6px);
+  margin-bottom: 10px;
+  list-style: none;
+  transition: $transition-hover;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+
+  @include max(1023) {
+    width: calc(25% - 10px);
+  }
+  @include max(767) {
+    width: calc(50% - 5px);
+  }
+  &:hover {
+    transform: translateY(-5px);
+  }
+  &.disabled {
+    pointer-events: none;
+  }
+}
+
+.pay-other__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 66px;
+  padding: 5px 10px;
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.pay-card {
+  display: flex;
+  margin-bottom: 10px;
+
+  @include max(500) {
+    margin-bottom: 30px;
+  }
+}
+
+.pay-card__img {
+  flex: none;
+  width: 95px;
+  margin-right: 20px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.pay-card__text {
+  span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    display: block;
+    color: #fff;
+  }
+}
+
+.pay-invoice {
+  display: flex;
+  margin-bottom: 53px;
+
+  @include max(500) {
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+}
+
+.pay-invoice__link {
+  display: flex;
+  align-items: center;
+  flex: none;
+  padding-right: 16px;
+
+  @include max(500) {
+    padding-right: 0;
+  }
+  svg {
+    flex: none;
+    fill: $highlight;
+    width: 20px;
+    height: 22px;
+    margin-right: 10px;
+  }
+  span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    white-space: nowrap;
+    color: #00a7e3;
+  }
+}
+
+.pay-invoice__text {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 15px;
+  max-width: 580px;
+  padding: 8px 0 8px 16px;
+  color: #fff;
+  border-left: 1px solid #c4c4c4;
+
+  @include max(500) {
+    padding: 8px 0 8px 0;
+    border-left: none;
+  }
+  img {
+    margin-left: 5px;
+    transform: translateY(2px);
+  }
+}

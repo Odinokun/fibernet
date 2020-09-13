@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - var title       = 'Help | Fibernet'
+  - var title       = 'Помощь | Fibernet'
   - var description = ''
 
 block content
@@ -13,7 +13,7 @@ block content
       .index-particles#index-particles
 
       .container
-        h1.sales__title.title Помощь
+        h1.title Помощь
         //begin help-form
         form.help-form
           //begin help-form__left
@@ -50,6 +50,7 @@ block content
           //end help-form__right
         //end help-form
 
+      include ../elements/popup
       include ../sections/footer
     //end content
 
