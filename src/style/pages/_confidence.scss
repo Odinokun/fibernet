@@ -38,8 +38,8 @@
 .confidence-ul__list {
   li {
     position: relative;
-    list-style: none;
     display: inline-block;
+    list-style: none;
     &::before {
       position: absolute;
       top: 9px;

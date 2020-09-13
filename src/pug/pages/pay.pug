@@ -15,6 +15,99 @@ block content
       .container
         h1.title Оплата
 
+        //begin pay__forms
+        .pay__forms
+          //begin pay__form
+          form.pay__form.pay-form.pay-form--left
+            .pay-form__inn
+              h3.pay-form__title Провести оплату
+              .pay-form__text
+                p Заполните необходимые поля, после этого начнется защищенное соединение со страницей авторизации и оплаты банка ПСКБ. Следуйте инструкциям на экране.
+              input(type='text' placeholder='Номер лицевого счета').pay-form__input
+              input(type='text' placeholder='Сумма, ₽').pay-form__input
+              input(type='submit' value='Перейти к оплате').pay-form__submit
+          //end pay__form
+
+          //begin pay__form
+          form.pay__form.pay-form.pay-form--right
+            .pay-form__inn
+              h3.pay-form__title Проверить платеж
+              .pay-form__text
+                p После оплаты Вы можете проверить статус своего платежа, используя полученный номер квитанции и последние 4 цифры Вашей банковской карты.
+              input(type='text' placeholder='Номер квитанции').pay-form__input
+              input(type='text' placeholder='Последние 4 цифры своей карты').pay-form__input
+              input(type='submit' value='Проверить платеж').pay-form__submit
+          //end pay__form
+        //end pay__forms
+          
+        //begin pay__text
+        .pay__text
+          p Оплата (без комиссии) картами: Visa, Mastercard, Мир.
+          p Платеж поступит на ваш лицевой счет в «<a href='#'>Untolovo.NET</a>» в течении 5-7 минут с момента оплаты на странице банка.
+          p Минимальный платеж — 10 ₽, максимальный — 30 000 ₽.
+        //end pay__text
+
+        //begin pay__text-sm
+        .pay__text-sm
+          p В случае непрохождения платежа просьба обратиться в техническую поддержку банка ПСКБ тел. +7 (812) 332-31-17,<br>e-mail: support@pscb.ru. При обращении просьба приготовить данные квитанции осуществленного платежа.
+          p Прием платежей с банковских карт производится согласно дополнительному соглашению №2 к договору № 15-06/25 о приеме платежей от 15.06.2007 г.,<br>заключенному между ООО «ЮНТА» и ОАО «Петербургский социальный коммерческий банк».<br>ОАО «ПСКБ», Генеральная лицензия ЦБ РФ № 2551 на осуществление банковских операций.
+        //end pay__text-sm
+          
+        //begin pay__other
+        .pay__other.pay-other
+          h3.pay-other__title Другие способы оплаты
+          ul.pay-other__list
+            li.pay-other__item.disabled
+              a(href="#").pay-other__link
+                img(src="assets/img/pay-other-01.png" alt="picture")
+            li.pay-other__item.disabled
+              a(href="#").pay-other__link
+                img(src="assets/img/pay-other-02.png" alt="picture")
+            li.pay-other__item
+              a(href="#").pay-other__link
+                img(src="assets/img/pay-other-03.png" alt="picture")
+            li.pay-other__item
+              a(href="#").pay-other__link
+                img(src="assets/img/pay-other-04.png" alt="picture")
+            li.pay-other__item
+              a(href="#").pay-other__link
+                img(src="assets/img/pay-other-05.png" alt="picture")
+            li.pay-other__item
+              a(href="#").pay-other__link
+                img(src="assets/img/pay-other-06.png" alt="picture")
+            li.pay-other__item
+              a(href="#").pay-other__link
+                img(src="assets/img/pay-other-07.png" alt="picture")
+        //end pay__other
+
+        //begin pay__card
+        .pay__card.pay-card
+          .pay-card__img
+            img(src="assets/img/card.png" alt="picture")
+          .pay-card__text
+            span Приобрести карты оплаты в торговом центре «Приморский».
+            span Номиналы: 150, 300
+        //end pay__card
+
+        //begin pay__invoice
+        .pay__invoice.pay-invoice
+          a(href="#").pay-invoice__link
+            +svg('doc')
+            span Бланк квитанции
+          .pay-invoice__text
+            span Для ускорения начисления на Ваш лицевой счёт денежных средств рекомендуем прислать отсканированную квитанцию об оплате на адрес электронной почты
+            a(href="#")
+              img(src="assets/img/email.png" alt="picture")
+        //end pay__invoice
+
+        //begin pay__text
+        .pay__text
+          p Если у вас возникли вопросы по оплате, позвоните нам по тел. +7 (812) 643-50-50 или напишите в форму в разделе «Контакты».
+          p Позаботьтесь заранее о пополнении лицевого счёта.
+          p Помните, что абонентская плата и другие периодические платежи снимаются в начале каждого расчётного периода.
+        //end pay__text
+
+      include ../elements/popup
       include ../sections/footer
     //end content
 
