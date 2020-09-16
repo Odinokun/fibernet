@@ -1,0 +1,234 @@
+extends ../_template
+
+mixin tariff-accordion__row(question)
+  //begin tariff-accordion__row
+  .tariff-accordion__row
+    .tariff-accordion__question
+      span #{question}
+    .tariff-accordion__answer
+      p В отличии от других операторов у нас отсутсвует какое-либо ограничение на скачиваемый трафик. Мы не снижаем скорость, сколько бы вы ни скачали.
+      p Доступ к внутренним медиа-ресурсам сети не тарифицируется и не ограничена.<br>Доступ к ресурсам по прогамме Яндекс.Локальная сеть не тарифицируется и не ограничена.
+      p Обращаем Ваше внимание, что с 01:00 до 17:00 в нашей сети отсутствует ограничение скорости доступа в сеть Интернет. Это позволяет Вам работать в сети Интернет со скоростью до 100 Мбит/с. В период с 17:00 до 01:00 скорость соответствует выбранному тарифному плану.
+  //end tariff-accordion__row
+
+mixin tariff-slider__item(title, active)
+  li.tariff-slider__item
+    .tariff-slider__header
+      h3.tariff-slider__title #{title}
+    .tariff-slider__body
+      .tariff-slider__row
+        .tariff-slider__td Скорость входящего трафика:
+        .tariff-slider__td 50 Мбит/с
+      .tariff-slider__row
+        .tariff-slider__td Скорость исходящего трафика:
+        .tariff-slider__td 50 Мбит/с
+      .tariff-slider__row
+        .tariff-slider__td Абонентская плата:
+        .tariff-slider__td 300 ₽/мес.
+      .tariff-slider__row
+        .tariff-slider__td Стоимость при оплате 3-х месяцев по акции «<a href='#'>3+1</a>»:
+        .tariff-slider__td 300 ₽/мес.
+      .tariff-slider__row
+        .tariff-slider__td Стоимость для новых абонентов по акциям «<a href='#'>Месяц в подарок</a>» и «<a href='#'>3+1</a>»:
+        .tariff-slider__td <strong>180 ₽/мес.</strong>
+
+      div(class='tariff-slider__btn ' + active)
+        span Подключиться
+        +svg('check')
+
+mixin tariff-slider__item-tooltip(title, active)
+  li.tariff-slider__item
+    .tariff-slider__header
+      h3.tariff-slider__title #{title}
+      .tooltip
+        +svg('question')
+        .tooltip__text
+          span Максимально возможная скорость входящего трафика для WEB-приложений и электронной почты (порты 25, 80, 110, 443, 8080). По остальным портам скорость входящего трафика – 40 Мбит/с.
+    .tariff-slider__body
+      .tariff-slider__row
+        .tariff-slider__td Скорость входящего трафика:
+        .tariff-slider__td 50 Мбит/с
+      .tariff-slider__row
+        .tariff-slider__td Скорость исходящего трафика:
+        .tariff-slider__td 50 Мбит/с
+      .tariff-slider__row
+        .tariff-slider__td Абонентская плата:
+        .tariff-slider__td 300 ₽/мес.
+      .tariff-slider__row
+        .tariff-slider__td Стоимость при оплате 3-х месяцев по акции «<a href='#'>3+1</a>»:
+        .tariff-slider__td 300 ₽/мес.
+      .tariff-slider__row
+        .tariff-slider__td Стоимость для новых абонентов по акциям «<a href='#'>Месяц в подарок</a>» и «<a href='#'>3+1</a>»:
+        .tariff-slider__td <strong>180 ₽/мес.</strong>
+
+      div(class='tariff-slider__btn ' + active)
+        span Подключиться
+        +svg('check')
+
+mixin tariff-slider__item-2(title, active)
+  li.tariff-slider__item
+    .tariff-slider__header
+      h3.tariff-slider__title #{title}
+    .tariff-slider__body
+      .tariff-slider__row
+        .tariff-slider__td Количество каналов:
+        .tariff-slider__td 206
+      .tariff-slider__row
+        .tariff-slider__td Абонентская плата:
+        .tariff-slider__td <strong>199 ₽/мес.</strong>
+
+      div(class='tariff-slider__btn ' + active)
+        span Подключиться
+        +svg('check')
+
+mixin tariff-slider__item-3(title, active)
+  li.tariff-slider__item
+    .tariff-slider__header
+      h3.tariff-slider__title #{title}
+    .tariff-slider__body
+      .tariff-slider__row
+        .tariff-slider__td Абонентская плата:
+        .tariff-slider__td <strong>320 ₽/мес.</strong>
+      .tariff-slider__row
+        .tariff-slider__td Включено минут:
+        .tariff-slider__td неограниченно
+      .tariff-slider__row
+        .tariff-slider__td Превышение:
+        .tariff-slider__td нет
+
+      div(class='tariff-slider__btn ' + active)
+        span Подключиться
+        +svg('check')
+
+mixin tariff-slider__item-3-tooltip(title, active)
+  li.tariff-slider__item
+    .tariff-slider__header
+      h3.tariff-slider__title #{title}
+      .tooltip
+        +svg('question')
+        .tooltip__text
+          span Максимально возможная скорость входящего трафика для WEB-приложений и электронной почты (порты 25, 80, 110, 443, 8080). По остальным портам скорость входящего трафика – 40 Мбит/с.
+    .tariff-slider__body
+      .tariff-slider__row
+        .tariff-slider__td Абонентская плата:
+        .tariff-slider__td <strong>320 ₽/мес.</strong>
+      .tariff-slider__row
+        .tariff-slider__td Включено минут:
+        .tariff-slider__td неограниченно
+      .tariff-slider__row
+        .tariff-slider__td Превышение:
+        .tariff-slider__td нет
+
+      div(class='tariff-slider__btn ' + active)
+        span Подключиться
+        +svg('check')
+
+block variables
+  - var title       = 'Оплата | Fibernet'
+  - var description = ''
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.tariff
+      .index-particles#index-particles
+
+      .container
+        h1.title Тарифы
+        h2.tariff__title Безлимитный Интернет
+
+      .tariff__slider-wrap
+        //begin tariff__slider
+        ul.tariff__slider.tariff-slider
+          +tariff-slider__item('Старт-50М', 'active')
+          +tariff-slider__item('Циклон-80М', '')
+          +tariff-slider__item-tooltip('Протон-100М', '')
+          +tariff-slider__item('Энергия-200М', '')
+          +tariff-slider__item('Энергия-200М', '')
+        //end tariff__slider
+
+      .container
+        //begin tariff__accordion
+        .tariff__accordion.tariff-accordion
+          +tariff-accordion__row('Подключение')
+          +tariff-accordion__row('Характеристики сети')
+        //end tariff__accordion
+
+        h2.tariff__title Телевидение <a href='video.html'>«Смотрёшка»</a>
+
+      .tariff__slider-wrap
+        //begin tariff__slider
+        ul.tariff__slider.tariff-slider
+          +tariff-slider__item-2('Стандарт', '')
+          +tariff-slider__item-2('Оптима', 'active')
+          +tariff-slider__item-2('Эксклюзив', '')
+          +tariff-slider__item-2('Эксклюзив +', '')
+        //end tariff__slider
+
+      .container
+        h2.tariff__title Местная телефония
+
+      .tariff__slider-wrap
+        //begin tariff__slider
+        ul.tariff__slider.tariff-slider
+          +tariff-slider__item-3-tooltip('Безлимитный', '')
+          +tariff-slider__item-3('Повременный', '')
+          +tariff-slider__item-3('Комбинированный-100', '')
+          +tariff-slider__item-3('Комбинированный-100', '')
+        //end tariff__slider
+
+      .container
+        //begin tariff__accordion
+        .tariff__accordion.tariff-accordion
+          +tariff-accordion__row('Мобильные и межгород')
+          +tariff-accordion__row('Подключение')
+        //end tariff__accordion
+
+        //begin tariff__order
+        .tariff__order.tariff-order
+          //begin tariff-order__left
+          .tariff-order__left
+            //begin tariff-order__row
+            .tariff-order__row
+              .tariff-order__label Безлимитный интернет:
+              .tariff-order__td Тариф «Старт-50М»
+              .tariff-order__td 180 ₽/мес.
+            //end tariff-order__row
+            //begin tariff-order__row
+            .tariff-order__row
+              .tariff-order__label Телевидение «Смотрёшка»:
+              .tariff-order__td Тариф «Оптима»
+              .tariff-order__td 449 ₽/мес.
+            //end tariff-order__row
+            //begin tariff-order__row
+            .tariff-order__row
+              .tariff-order__label Местная телефония
+              .tariff-order__td Тариф «Комбинированный-400»
+              .tariff-order__td 250 ₽/мес.
+            //end tariff-order__row
+            //begin tariff-order__row-total
+            .tariff-order__row-total
+              .tariff-order__td-total Итого
+              .tariff-order__td-total
+                span.tariff-order__td-total-num 879
+                =' '
+                i ₽/мес.*
+                .tooltip
+                  +svg('question')
+                  .tooltip__text.tooltip__text--center
+                    span Для более точного расчета<br>с Вами свяжется наш оператор
+            //end tariff-order__row-total
+          //end tariff-order__left
+
+          include ../elements/form-sm
+        //end tariff__order
+
+      include ../elements/popup
+      include ../sections/footer
+    //end content
+
+    include ../sections/scripts
+    script.
+      particlesJS.load('index-particles', 'assets/js/particlesjs-config-inn.json', function() {});

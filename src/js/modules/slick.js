@@ -2,78 +2,38 @@ module.exports = function() {
 
   // begin Slick slider
 
-  $('.slick').slick({
+  $('.tariff-slider').slick({
     dots: false,
     arrows: true,
-    infinite: true,
-    autoplay: true,
+    infinite: false,
+    autoplay: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: "<div class='prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"33\" height=\"14\" viewBox=\"0 0 33 14\"><g><g><path d=\"M6.173.33L.55 5.952c-.44.439-.44 1.15 0 1.59l5.623 5.623a1.125 1.125 0 0 0 1.59-1.59L4.06 7.872h27.036a1.125 1.125 0 0 0 0-2.249H4.06L7.763 1.92a1.121 1.121 0 0 0 0-1.59 1.125 1.125 0 0 0-1.59 0z\"/></g></g></svg></div>",
-    nextArrow: "<div class='next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"33\" height=\"14\" viewBox=\"0 0 33 14\"><g><g><path d=\"M26.33 13.166l5.623-5.623c.439-.44.439-1.151 0-1.59L26.33.329a1.125 1.125 0 0 0-1.59 1.59l3.702 3.704H1.407a1.125 1.125 0 0 0 0 2.25h27.035l-3.703 3.703a1.121 1.121 0 0 0 0 1.59c.44.44 1.151.44 1.59 0z\"/></g></g></svg></div>",
+    prevArrow: "<div class='prev'><svg width=\"14\" height=\"24\" viewBox=\"0 0 14 24\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.5695 2.39881L3.54376 12.0006L13.5695 21.6014C14.1435 22.1502 14.1435 23.0399 13.5695 23.5877C12.9954 24.1374 12.0674 24.1374 11.4914 23.5877L0.432001 12.9933C-0.143998 12.4445 -0.143998 11.5558 0.432001 11.007L11.4914 0.411587C12.0674 -0.137193 12.9954 -0.137193 13.5695 0.411587C14.1435 0.95943 14.1435 1.84909 13.5695 2.39881Z\"></path></svg></div>",
+    nextArrow: "<div class='next'><svg width=\"14\" height=\"24\" viewBox=\"0 0 14 24\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0.430534 21.6012L10.4562 11.9994L0.430532 2.39857C-0.143511 1.84979 -0.143511 0.96013 0.430532 0.412286C1.00458 -0.137429 1.93263 -0.137429 2.50863 0.412286L13.568 11.0067C14.144 11.5555 14.144 12.4442 13.568 12.993L2.50863 23.5884C1.93263 24.1372 1.00458 24.1372 0.430534 23.5884C-0.143509 23.0406 -0.143509 22.1509 0.430534 21.6012Z\"/></svg></div>",
     responsive: [
       {
-        breakpoint: 481,
+        breakpoint: 1024,
         settings: {
-          arrows: false
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }, {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }, {
+        breakpoint: 550,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       }
     ]
   });
-
-  //begin slider with counters
-  // отображаем общее кол-во слайдов
-  $('#index-direction__slider').on('init', function (event, slick) {
-    var allSlide = slick.slideCount;
-    if (allSlide < 10) {
-      allSlide = "0" + allSlide;
-    }
-    $("#counter-all").html(allSlide);
-  });
-  // отображаем текущий слайд в счетчике
-  $('#index-direction__slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-    var curSlide = currentSlide + 1;
-    if (curSlide < 10) {
-      curSlide = "0" + curSlide;
-    }
-    $("#counter-tab").html(curSlide);
-  });
-  // инициализируем слайдер
-  $('#index-direction__slider').slick({
-    arrows: true,
-    fade: true,
-    autoplay: false,
-    cssEase: 'linear',
-    slidesToShow: 1,
-    infinity:false,
-    slidesToScroll: 1,
-    dots: false,
-    adaptiveHeight: true,
-    dotsClass: 'custom_paging'
-  });
-  //end slider with counters
-
-
-  //begin fadeIn/Out left arrows
-  $('.slick-slider .slick-next').on('click', function () {
-    var slider = $(this).parents('.slick-slider');
-    $(slider).children('.slick-prev').addClass('active');
-  });
-  //end fadeIn/Out left arrows
-
-  //begin fade next btn if last slide is active
-  $('.course-schedule__slider .slick-next, .course-schedule__slider .slick-prev').on('click', function () {
-    var slider = $(this).parents('.course-schedule__slider');
-    var lastChild = $(slider).find('.slick-slide:last');
-
-    if($(lastChild).hasClass('slick-active')){
-      $(slider).children('.slick-next').addClass('hide');
-    } else {
-      $(slider).children('.slick-next').removeClass('hide');
-    }
-  });
-  //end fade next btn if last slide is active
-
   // end Slick slider
 
 };

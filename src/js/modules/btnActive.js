@@ -18,4 +18,18 @@ module.exports = function() {
   });
   // end btn form active
 
+  //begin tariff page slider btn
+  $('.tariff-slider__btn').on('click', function () {
+    let slider = $(this).parents('.tariff-slider');
+    let btns = $(slider).find('.tariff-slider__btn');
+
+    if ($(this).hasClass('active')){
+      $(this).removeClass('active');
+    } else {
+      $(btns).removeClass('active');
+      $(this).addClass('active');
+    }
+  });
+  //end tariff page slider btn
+
 };
