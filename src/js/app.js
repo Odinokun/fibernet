@@ -30,7 +30,11 @@ $(function() {
   // begin search field shake
   require('./modules/searchShake')();
 
+  // begin accordion
+  require('./modules/accordion')();
+
   // begin Slick slider
-  // require('./modules/slick')();
+  require('./modules/slick')();
+
 
 });

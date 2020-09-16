@@ -14,6 +14,7 @@ $(document).ready(function ($) {
     'pay',
     'confidence',
     'agree',
+    'tariff',
   ]);
 });
 
@@ -37,3 +38,4 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
+

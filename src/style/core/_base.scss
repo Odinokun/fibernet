@@ -181,3 +181,68 @@ svg {
   margin-bottom: 28px;
   color: #fff;
 }
+
+.tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border: 1px solid $highlight;
+  border-radius: 50%;
+  &:hover {
+    border: 1px solid #00cbd8;
+    background: rgba(0, 203, 216, .1);
+    svg {
+      fill: #00cbd8;
+    }
+    .tooltip__text {
+      opacity: 1;
+    }
+  }
+  svg {
+    fill: $highlight;
+    width: 6px;
+    height: 10px;
+    transition: $transition-hover;
+  }
+}
+
+.tooltip__text {
+  position: absolute;
+  bottom: calc(100% + 15px);
+  left: 50%;
+  width: 230px;
+  padding: 15px;
+  transition: $transition-hover;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 3px;
+  background-color: #979d9d;
+  &::before {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 10px;
+    margin: auto;
+    content: '';
+    border-top: 5px solid #979d9d;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    display: block;
+    color: #fff;
+  }
+}
+
+.tooltip__text--center {
+  text-align: center;
+}
