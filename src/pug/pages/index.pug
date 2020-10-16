@@ -23,12 +23,22 @@ block content
         //begin index__search
         .index__search.index-search
           a(href="#").index-search__btn Проверить подключение
-          form.index-search__form
+          //-form.index-search__form
             .ui-widget.index-search__ui-widget
               label(for="search-adress")
               input#search-adress(value='')
             input.index-search__form-submit(type='submit' value='Найти')
             .index-search__form-clear
+          form.index-search__form
+            .ui-widget.index-search__ui-widget
+              .geo-btn
+                +svg('geo')
+              label(for='search-adress')
+              input#search-adress.ui-autocomplete-input(value='' autocomplete='off' placeholder='Введите адрес')
+            input#geo-adress(type='hidden' value='')
+            button.index-search__form-submit Найти
+            .index-search__form-clear
+
         //end index__search
 
       include ../elements/popup

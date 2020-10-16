@@ -36,4 +36,24 @@ module.exports = function() {
   });
   // end Slick slider
 
+  //begin fadeIn/Out left arrows
+  $('.tariff-slider .next').on('click', function () {
+    let slider = $(this).parents('.tariff-slider');
+    $(slider).children('.prev').addClass('active');
+  });
+  //end fadeIn/Out left arrows
+
+  //begin fade next btn if last slide is active
+  $('.tariff-slider .next, .tariff-slider .prev').on('click', function () {
+    let slider = $(this).parents('.tariff-slider');
+    let lastChild = $(slider).find('.slick-slide:last');
+
+    if($(lastChild).hasClass('slick-active')){
+      $(slider).children('.next').addClass('hide');
+    } else {
+      $(slider).children('.next').removeClass('hide');
+    }
+  });
+  //end fade next btn if last slide is active
+
 };

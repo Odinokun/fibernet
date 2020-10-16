@@ -55,6 +55,14 @@
       }
     }
   }
+  &:hover {
+    .menu__icon {
+      fill: #00cbd8;
+    }
+    .menu__text {
+      color: #00cbd8;
+    }
+  }
 }
 
 .menu__icon {
@@ -62,6 +70,7 @@
   width: 24px;
   height: 24px;
   margin-bottom: 9px;
+  transition: $transition-hover;
 
   @include max(1200) {
     width: 48px;
@@ -76,6 +85,7 @@
   font-weight: bold;
   line-height: 12px;
   display: block;
+  transition: $transition-hover;
   text-align: center;
   text-transform: uppercase;
   color: $highlight;
@@ -100,7 +110,7 @@
   pointer-events: none;
   opacity: 0;
   border-radius: 3px;
-  background: #979d9d;
+  background-color: #4a4d52;
 
   @include max(1200) {
     top: 80%;
@@ -114,7 +124,7 @@
     margin: auto;
     content: '';
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #979d9d;
+    border-bottom: 8px solid #4a4d52;
     border-left: 8px solid transparent;
   }
   span {
