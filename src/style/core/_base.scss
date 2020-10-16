@@ -221,7 +221,7 @@ svg {
   pointer-events: none;
   opacity: 0;
   border-radius: 3px;
-  background-color: #979d9d;
+  background-color: #4a4d52;
   &::before {
     position: absolute;
     top: 100%;
@@ -230,7 +230,7 @@ svg {
     width: 10px;
     margin: auto;
     content: '';
-    border-top: 5px solid #979d9d;
+    border-top: 5px solid #4a4d52;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
   }

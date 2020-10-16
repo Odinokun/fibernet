@@ -107,6 +107,33 @@
   }
 }
 
+.geo-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  cursor: pointer;
+
+  @include max(767) {
+    left: 5px;
+    width: 35px;
+    height: 35px;
+  }
+  svg {
+    stroke: #00a7e3;
+    width: 50px;
+    height: 50px;
+
+    @include max(767) {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
 .index-search__form-submit {
   font-size: 18px;
   font-weight: normal;
@@ -213,21 +240,21 @@
 .ui-autocomplete-input {
   font-size: 18px !important;
   font-weight: normal;
-  line-height: 22px;
+  line-height: 1;
   overflow: hidden;
   width: 100%;
   min-height: 70px;
   margin: 0 auto;
-  padding: 6px 170px 0 60px;
+  padding: 1px 170px 0 60px;
   transition: $transition-hover;
   color: #4a4d52;
   border: 1px solid #f2f2f2;
   border-radius: 3px !important;
   background-color: #fff;
-  background-image: url('../img/input-marker.svg');
-  background-repeat: no-repeat;
-  background-position: 33px 50%;
-  background-size: 17px 18px;
+  //background-image: url('../img/input-marker.svg');
+  //background-repeat: no-repeat;
+  //background-position: 33px 50%;
+  //background-size: 17px 18px;
   box-shadow: 0 0 20px rgba(0, 0, 0, .05);
 
   @include placeholder-color(#a4a6a8);
@@ -236,7 +263,7 @@
     line-height: 17px;
     min-height: 50px;
     padding: 0 130px 0 40px;
-    background-position: 13px 50%;
+    //background-position: 13px 50%;
   }
   &.open {
     border-bottom: none;
@@ -244,64 +271,66 @@
   }
 }
 
-.ui-widget.ui-widget-content {
-  &.search-adress-list {
-    overflow-x: hidden;
-    overflow-y: auto;
-    max-height: 205px;
-    border-top: none;
-    border-right: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-    border-left: 1px solid #f2f2f2;
-    border-radius: 0 0 3px 3px;
+.codyshop-ajax-search,
+.ui-widget.ui-widget-content.search-adress-list {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 205px;
+  border-top: none;
+  border-right: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  border-radius: 0 0 3px 3px;
+
+  @include max(767) {
+    max-height: 130px;
+  }
+  li,
+  .ui-menu-item {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+    padding: 20px 20px 20px 52px;
+    transition: $transition-hover;
+    background-color: #fff;
 
     @include max(767) {
-      max-height: 130px;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 10px 10px 10px 35px;
     }
-    .ui-menu-item {
-      font-size: 18px;
-      font-weight: normal;
-      line-height: 22px;
-      padding: 20px 20px 20px 52px;
+    span,
+    .ui-menu-item-wrapper {
+      margin: 0 !important;
       transition: $transition-hover;
-      background-color: #fff;
-
-      @include max(767) {
-        font-size: 14px;
-        line-height: 17px;
-        padding: 10px 10px 10px 35px;
-      }
+      color: #4a4d52;
+      border: none !important;
+      background-color: transparent !important;
+    }
+    &:hover {
+      span,
       .ui-menu-item-wrapper {
-        margin: 0 !important;
-        transition: $transition-hover;
-        color: #4a4d52;
-        border: none !important;
-        background-color: transparent !important;
-      }
-      &:hover {
-        .ui-menu-item-wrapper {
+        line-height: 22px;
+        transition-delay: 0s;
+        color: $highlight !important;
+
+        @include max(767) {
+          line-height: 17px;
+        }
+        &:hover {
           line-height: 22px;
-          transition-delay: 0s;
+          margin: 0;
           color: $highlight !important;
 
           @include max(767) {
             line-height: 17px;
           }
-          &:hover {
-            line-height: 22px;
-            margin: 0;
-            color: $highlight !important;
-
-            @include max(767) {
-              line-height: 17px;
-            }
-          }
         }
       }
+    }
 
-      &:nth-child(even) {
-        background-color: #f9f9f9;
-      }
+    &:nth-child(even) {
+      background-color: #f9f9f9;
     }
   }
 }
@@ -433,16 +462,16 @@
     transform: rotate(0deg);
   }
   5% {
-    transform: rotate(-.5deg);
+    transform: rotate(-.8deg);
   }
   10% {
-    transform: rotate(.5deg);
+    transform: rotate(.8deg);
   }
   15% {
-    transform: rotate(-.5deg);
+    transform: rotate(-.8deg);
   }
   20% {
-    transform: rotate(.5deg);
+    transform: rotate(.8deg);
   }
   25% {
     transform: rotate(0deg);

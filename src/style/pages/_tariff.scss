@@ -11,7 +11,7 @@
     &:hover {
       color: #fff;
       &::before {
-        width: 0;
+        width: 100%;
       }
     }
     &::before {
@@ -19,7 +19,7 @@
       right: 0;
       bottom: -3px;
       left: 0;
-      width: 100%;
+      width: 0;
       height: 1px;
       margin: auto;
       content: '';
@@ -75,6 +75,7 @@
     align-items: center;
     width: 75px;
     height: 75px;
+    cursor: pointer;
     transition: $transition-hover;
     transform: translateY(-50%);
     opacity: .5;
@@ -104,9 +105,15 @@
   .prev {
     left: 0;
     transform: translate(-55px, -50%);
+    pointer-events: none;
+    opacity: 0;
 
     @include max(1260) {
       transform: translate(-30px, -50%);
+    }
+    &.active {
+      pointer-events: auto;
+      opacity: 1;
     }
   }
   .next {
@@ -115,6 +122,10 @@
 
     @include max(1260) {
       transform: translate(30px, -50%);
+    }
+    &.hide {
+      pointer-events: none;
+      opacity: 0;
     }
   }
 }
@@ -127,7 +138,7 @@
   list-style: none;
   transition: $transition-hover;
   pointer-events: none;
-  opacity: .5;
+  opacity: .2;
   &.slick-active {
     pointer-events: auto;
     opacity: 1;
