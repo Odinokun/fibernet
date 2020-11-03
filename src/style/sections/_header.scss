@@ -17,6 +17,36 @@
   }
 }
 
+.header-adress {
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  display: flex;
+
+  @include max(1200) {
+    top: 35px;
+  }
+  @include max(500) {
+    left: 25px;
+  }
+}
+
+.header-adress__text {
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 12px;
+  opacity: .5;
+  color: #fff;
+}
+
+.header-adress__info {
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 12px;
+  padding-left: 7px;
+  color: #fff;
+}
+
 .header__logo {
   margin-right: 32px;
 }
