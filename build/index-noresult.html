@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Fibernet</title>
+    <meta name="description" content="">
+    <meta name="author" content="http://odinokun.com/">
+    <!-- begin responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- end responsive-->
+    <!-- begin favicon block start-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.jpg">
+    <!-- end favicon block end-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <!-- begin custom browsers color-->
+    <meta name="theme-color" content="#122B2E">
+    <!-- end custom browsers color-->
+    <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="main-wrap no-js">
+      <!--begin header-->
+      <header class="header" id="header">
+        <div class="container-lg">
+          <!--begin header__adress-->
+          <div class="header__adress header-adress"><span class="header-adress__text">Адрес подключения:</span><span class="header-adress__info">Некрасова, 14д</span></div>
+          <!--end header__adress-->
+          <!--begin logo--><a class="header__logo header-logo" href="/">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#logo"></use>
+            </svg></a>
+          <!--end logo-->
+          <!--begin phone--><a class="header__phone header-phone" href="tel:+78126435050">+7 (812) 643-50-50</a>
+          <!--end phone-->
+          <!--begin header__mobile-menu-wrap-->
+          <div class="header__mobile-menu-wrap">
+            <!--begin menu-->
+            <nav class="header__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link disabled" href="#">
+                    <svg class="menu__icon">
+                      <use xlink:href="assets/img/sprite.svg#menu-01"></use>
+                    </svg><span class="menu__text">тарифы</span>
+                    <div class="menu-tooltip"><span>Проверьте наличие сети «FIBERNET» в вашем регионе</span></div>
+                  </a></li>
+                <li class="menu__item"><a class="menu__link disabled" href="#">
+                    <svg class="menu__icon">
+                      <use xlink:href="assets/img/sprite.svg#menu-02"></use>
+                    </svg><span class="menu__text">акции</span>
+                    <div class="menu-tooltip"><span>Проверьте наличие сети «FIBERNET» в вашем регионе</span></div>
+                  </a></li>
+                <li class="menu__item"><a class="menu__link" href="#">
+                    <svg class="menu__icon">
+                      <use xlink:href="assets/img/sprite.svg#menu-03"></use>
+                    </svg><span class="menu__text">смотрёшка</span></a></li>
+                <li class="menu__item"><a class="menu__link" href="#">
+                    <svg class="menu__icon">
+                      <use xlink:href="assets/img/sprite.svg#menu-04"></use>
+                    </svg><span class="menu__text">помощь</span></a></li>
+                <li class="menu__item"><a class="menu__link" href="#">
+                    <svg class="menu__icon">
+                      <use xlink:href="assets/img/sprite.svg#menu-05"></use>
+                    </svg><span class="menu__text">контакты</span></a></li>
+              </ul>
+            </nav>
+            <!--end menu-->
+            <!--begin header__btns-->
+            <div class="header__btns"><a class="btn btn--circle header__btn-pay popup-open" href="#" data-popup="popup-include">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#wallet"></use>
+                </svg><span>оплата</span></a><a class="header__btn-person popup-open" href="#" data-popup="popup-success">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#person"></use>
+                </svg></a></div>
+            <!--end header__btns-->
+          </div>
+          <!--end header__mobile-menu-wrap-->
+          <!--begin burger-->
+          <div class="burger" id="burger">
+            <input class="burger__input" type="checkbox" id="burger__input">
+            <label class="burger__label" for="burger__input"></label>
+          </div>
+          <!--end burger-->
+        </div>
+      </header>
+      <!--end header-->
+      <!--begin content-->
+      <main class="main index">
+        <div class="index-particles" id="index-particles"></div>
+        <div class="container">
+          <!--begin index__hero-->
+          <div class="index__hero">
+            <h1 class="index__title">Fibernet</h1>
+            <h2 class="index__subtitle">Домашняя сеть</h2>
+          </div>
+          <!--end index__hero-->
+          <!--begin index__noresult-->
+          <div class="index__noresult index-noresult">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#flag"></use>
+            </svg>
+            <div class="index-noresult__text"><span>Дом может быть подключен, но препятсвует ТСЖ.<br>Просьба связаться с нами для решения данного вопроса.</span></div>
+            <div class="index-noresult__btns"><a class="btn-transparent index-noresult__btn" href="#">Подключите мой дом</a></div>
+          </div>
+          <!--end index__noresult-->
+        </div>
+        <!--begin popup-->
+        <div class="popup__layer" id="popup__layer"></div>
+        <!--begin popup-include-->
+        <div class="popup popup-include" id="popup-include">
+          <div class="popup__close">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#close"></use>
+            </svg>
+          </div>
+          <div class="popup__inn">
+            <div class="popup-include__text"><span>Данный адрес пока не подключен к FIBERNET, но вы можете оставить заявку на подключение</span></div>
+            <!--begin form-sm-->
+            <form class="form form-sm">
+              <input class="form__input form__input--phone form-sm__input phone-mask" type="text" placeholder="+7 (___) ___-__-__" required>
+              <input class="form__input form__input--name form-sm__input" type="text" placeholder="ФИО" required>
+              <input class="form__input form-sm__input" type="email" placeholder="Электронная почта">
+              <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark"></div>
+              <div class="form__agree">Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a></div>
+              <input class="form__submit disabled" type="submit" value="Подключиться">
+            </form>
+            <!--end form-sm-->
+          </div>
+        </div>
+        <!--end popup-include-->
+        <!--begin popup-success-->
+        <div class="popup popup-success" id="popup-success">
+          <div class="popup__inn">
+            <div class="popup-success__header">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#check"></use>
+              </svg><span>Заявка удачно отправлена</span>
+            </div>
+            <div class="popup-success__text"><span>Наш сотрудник свяжется с вами в течение 24 часов для уточнения деталей подключения.</span></div>
+            <button class="popup-success__btn">Ок</button>
+          </div>
+        </div>
+        <!--end popup-success-->
+        <!--end popup-->
+        <!--begin footer-->
+        <div class="footer">
+          <div class="container-lg">
+            <div class="footer__left"><span>©2008-2020 ООО «ЮНТА».</span><span>Лицензия №111078 Федеральной службы по надзору в сфере связи.</span><span>Все права принадлежат правообладателю.</span></div>
+            <div class="footer__right"><a class="footer__right-link" href="#">Политика конфиденциальности</a><a class="footer__right-link" href="#">Пользовательское соглашение</a></div>
+          </div>
+        </div>
+        <!--end footer-->
+      </main>
+      <!--end content-->
+      <script src="assets/js/foundation.js"></script>
+      <script src="assets/js/app.js"></script>
+      <script src="assets/js/uncompressed.js"></script>
+      <script src="assets/js/search.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+      <script>
+        particlesJS.load('index-particles', 'assets/js/particlesjs-config-index.json', function() {});
+      </script>
+    </div>
+  </body>
+</html>
