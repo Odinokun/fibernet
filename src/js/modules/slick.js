@@ -36,24 +36,41 @@ module.exports = function() {
   });
   // end Slick slider
 
-  //begin fadeIn/Out left arrows
-  $('.tariff-slider .next').on('click', function () {
-    let slider = $(this).parents('.tariff-slider');
-    $(slider).children('.prev').addClass('active');
-  });
-  //end fadeIn/Out left arrows
+  $('.tariff-slider').on('swipe', function () {
+    let lastChild = $(this).find('.slick-slide:last');
+    let firstChild = $(this).find('.slick-slide[data-slick-index="0"]');
 
-  //begin fade next btn if last slide is active
+    if($(lastChild).hasClass('slick-active')){
+      $(this).children('.next').addClass('hide');
+    } else {
+      $(this).children('.next').removeClass('hide');
+    }
+
+    if($(firstChild).hasClass('slick-active')){
+      $(this).children('.prev').removeClass('active');
+    } else {
+      $(this).children('.prev').addClass('active');
+    }
+  });
+
+
+  //begin fadeOut/fadeIn next/prev btn
   $('.tariff-slider .next, .tariff-slider .prev').on('click', function () {
     let slider = $(this).parents('.tariff-slider');
     let lastChild = $(slider).find('.slick-slide:last');
+    let firstChild = $(slider).find('.slick-slide[data-slick-index="0"]');
 
     if($(lastChild).hasClass('slick-active')){
       $(slider).children('.next').addClass('hide');
     } else {
       $(slider).children('.next').removeClass('hide');
     }
-  });
-  //end fade next btn if last slide is active
 
+    if($(firstChild).hasClass('slick-active')){
+      $(slider).children('.prev').removeClass('active');
+    } else {
+      $(slider).children('.prev').addClass('active');
+    }
+  });
+  //end fadeOut/fadeIn next/prev btn
 };

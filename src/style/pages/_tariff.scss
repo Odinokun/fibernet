@@ -113,7 +113,10 @@
     }
     &.active {
       pointer-events: auto;
-      opacity: 1;
+      opacity: .5;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   .next {
@@ -298,7 +301,7 @@
 
 .tariff-accordion__row {
   &.active {
-    .tariff-accordion__question::after {
+    .tariff-accordion__question-btn::after {
       transform: rotate(0deg);
     }
   }
@@ -309,23 +312,35 @@
   font-weight: 500;
   line-height: 17px;
   position: relative;
-  padding: 10px 20px 10px 25px;
+  display: flex;
+  padding: 10px 20px 10px 0;
   cursor: pointer;
   color: #00a7e3;
+}
 
+.tariff-accordion__question-btn {
+  position: relative;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  transform: translateY(-8px);
+  border-radius: 50%;
+  background-image: linear-gradient(90deg, #0066c4 0%, #00cbd8 100%);
   &::before,
   &::after {
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
-    left: 4px;
+    left: 0;
     width: 10px;
     height: 2px;
     margin: auto;
     content: '';
     transition: $transition-hover;
     border-radius: 2px;
-    background-color: #00a7e3;
+    background-color: #fff;
   }
   &::after {
     transform: rotate(90deg);
