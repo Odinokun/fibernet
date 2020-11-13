@@ -33,6 +33,9 @@ $(function() {
   // begin accordion
   require('./modules/accordion')();
 
+  // begin input file
+  require('./modules/file')();
+
   // begin Slick slider
   require('./modules/slick')();
 

@@ -27,9 +27,12 @@ block content
                 option Другое
               textarea(placeholder='Опишите проблему').form__textarea.help-form__textarea
               .help-form__file-input
-                input(type='file')
+                input(type='file' multiple)
                 +svg('clip')
                 span Приложить файл (JPEG, PNG).<br>Не более 5 Мб.
+              ul.help-form__file-names-list
+              button.help-form__file-clear.form__submit Очистить файлы
+
           //end help-form__left
 
           //begin help-form__right
@@ -40,7 +43,7 @@ block content
               input(type='text' placeholder='ФИО' required).form__input.form__input--name.form-sm__input
               input(type='text' placeholder='Адрес подключения').form__input.form__input--name.form-sm__input
               input(type='text' placeholder='Лицевой счет').form__input.form__input--name.form-sm__input
-              input(type='email' placeholder='Электронная почта').form__input.form-sm__input
+              input(type='email' placeholder='Электронная почта').form__input.form-sm__input.email-mask
               //-site captcha
               //-.g-recaptcha(data-sitekey="6LfqF8kZAAAAACRLR9vBV67aW6gZG7xOuRmvG9vD" data-theme="dark")
               //-localhost captcha

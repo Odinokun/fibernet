@@ -1,0 +1,39 @@
+extends ../_template
+
+block variables
+  - var title       = 'Fibernet'
+  - var description = ''
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main.index
+      .index-particles#index-particles
+
+      .container
+        //begin index__hero
+        .index__hero
+          h1.index__title Fibernet
+          h2.index__subtitle Домашняя сеть
+        //end index__hero
+
+        //begin index__noresult
+        .index__noresult.index-noresult
+          +svg('flag')
+          .index-noresult__text
+            span Дом может быть подключен, но препятсвует ТСЖ.<br>Просьба связаться с нами для решения данного вопроса.
+          .index-noresult__btns
+            a(href="#").btn-transparent.index-noresult__btn Помогу подключить дом
+          .index-noresult__text
+            span <a href="#">Тарифы</a> и <a href="#">акции</a>, которые мы можем вам предложить
+        //end index__noresult
+
+      include ../elements/popup
+      include ../sections/footer
+    //end content
+
+    include ../sections/scripts
+    script.
+      particlesJS.load('index-particles', 'assets/js/particlesjs-config-index.json', function() {});

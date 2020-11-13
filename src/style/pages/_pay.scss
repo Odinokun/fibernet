@@ -150,8 +150,8 @@
 
 .pay-other__item {
   display: flex;
-  flex-direction: column;
   overflow: hidden;
+  flex-direction: column;
   justify-content: flex-start;
   width: calc(14% - 6px);
   margin-bottom: 10px;
@@ -171,21 +171,20 @@
   &.disabled {
     pointer-events: none;
     .pay-other__info-link {
-      color: #FFFFFF;
-
+      color: #fff;
     }
   }
 }
 
 .pay-other__link {
   display: flex;
-  border-radius: 3px;
-  background-color: #fff;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 66px;
   padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #fff;
   img {
     max-width: 100%;
     object-fit: contain;
@@ -193,29 +192,25 @@
   }
 }
 
-.pay-other__info-link{
-  display: block;
-  font-weight: normal;
+.pay-other__info-link {
   font-size: 14px;
+  font-weight: normal;
   line-height: 17px;
-  color: $link;
+  display: block;
   padding: 10px 0 2px 0;
-  &:hover {
   color: $link;
+  &:hover {
+    color: $link;
   }
 }
 
-
-.pay-other__info-descr{
-  display: block;
-  font-weight: normal;
+.pay-other__info-descr {
   font-size: 12px;
+  font-weight: normal;
   line-height: 15px;
-
-
-  color: #FFFFFF;
-
-  opacity: 0.5;
+  display: block;
+  opacity: .5;
+  color: #fff;
 }
 
 .pay-card {

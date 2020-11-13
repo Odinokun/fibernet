@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Помощь | Fibernet</title>
+    <title>Fibernet</title>
     <meta name="description" content="">
     <meta name="author" content="http://odinokun.com/">
     <!-- begin responsive-->
@@ -88,51 +88,25 @@
       </header>
       <!--end header-->
       <!--begin content-->
-      <main class="main help">
+      <main class="main index">
         <div class="index-particles" id="index-particles"></div>
         <div class="container">
-          <h1 class="title">Помощь</h1>
-          <!--begin help-form-->
-          <form class="help-form">
-            <!--begin help-form__left-->
-            <div class="help-form__left">
-              <h2 class="help-form__title">Категория проблемы</h2>
-              <div class="help-form__left-inn">
-                <select class="help-form__select" id="help-form__select">
-                  <option>Нет подключения к интернету</option>
-                  <option>Низкая скорость соединения</option>
-                  <option>Вопросы оплаты и списания абонентской платы</option>
-                  <option>Другое</option>
-                </select>
-                <textarea class="form__textarea help-form__textarea" placeholder="Опишите проблему"></textarea>
-                <div class="help-form__file-input">
-                  <input type="file" multiple>
-                  <svg>
-                    <use xlink:href="assets/img/sprite.svg#clip"></use>
-                  </svg><span>Приложить файл (JPEG, PNG).<br>Не более 5 Мб.</span>
-                </div>
-                <ul class="help-form__file-names-list"></ul>
-                <button class="help-form__file-clear form__submit">Очистить файлы</button>
-              </div>
-            </div>
-            <!--end help-form__left-->
-            <!--begin help-form__right-->
-            <div class="help-form__right">
-              <h2 class="help-form__title">Персональные данные</h2>
-              <div class="help-form__right-inn">
-                <input class="form__input form__input--phone form-sm__input phone-mask" type="text" placeholder="+7 (___) ___-__-__" required>
-                <input class="form__input form__input--name form-sm__input" type="text" placeholder="ФИО" required>
-                <input class="form__input form__input--name form-sm__input" type="text" placeholder="Адрес подключения">
-                <input class="form__input form__input--name form-sm__input" type="text" placeholder="Лицевой счет">
-                <input class="form__input form-sm__input email-mask" type="email" placeholder="Электронная почта">
-                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark"></div>
-                <div class="form__agree">Нажимая на кнопку, вы принимаете наше <a href='#'>Соглашение о сборе данных</a></div>
-                <input class="form__submit disabled" type="submit" value="Отправить">
-              </div>
-            </div>
-            <!--end help-form__right-->
-          </form>
-          <!--end help-form-->
+          <!--begin index__hero-->
+          <div class="index__hero">
+            <h1 class="index__title">Fibernet</h1>
+            <h2 class="index__subtitle">Домашняя сеть</h2>
+          </div>
+          <!--end index__hero-->
+          <!--begin index__noresult-->
+          <div class="index__noresult index-noresult">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#flag"></use>
+            </svg>
+            <div class="index-noresult__text"><span>Дом может быть подключен, но препятсвует ТСЖ.<br>Просьба связаться с нами для решения данного вопроса.</span></div>
+            <div class="index-noresult__btns"><a class="btn-transparent index-noresult__btn" href="#">Помогу подключить дом</a></div>
+            <div class="index-noresult__text"><span><a href="#">Тарифы</a> и <a href="#">акции</a>, которые мы можем вам предложить</span></div>
+          </div>
+          <!--end index__noresult-->
         </div>
         <!--begin popup-->
         <div class="popup__layer" id="popup__layer"></div>
@@ -188,7 +162,7 @@
       <script src="assets/js/search.js"></script>
       <script src="https://www.google.com/recaptcha/api.js"></script>
       <script>
-        particlesJS.load('index-particles', 'assets/js/particlesjs-config-inn.json', function() {});
+        particlesJS.load('index-particles', 'assets/js/particlesjs-config-index.json', function() {});
       </script>
     </div>
   </body>

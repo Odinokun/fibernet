@@ -6,6 +6,7 @@ $(document).ready(function ($) {
     'index',
     'index-result',
     'index-noresult',
+    'index-noresult-2',
     'sales',
     'sale',
     'video',
